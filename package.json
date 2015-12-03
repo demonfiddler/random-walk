@@ -1,0 +1,252 @@
+{
+	"name" : "random-walk",
+	"title" : "Random Walk",
+	"version" : "0.0.1",
+	"description" : "Takes you on a random web walk",
+	"main" : "lib/main.js",
+	"author" : "Adrian Price <adrianp.quatinus@virginmedia.com>",
+	"engines" : {
+		"firefox" : ">=38.0a1",
+		"fennec" : ">=38.0a1"
+	},
+	"license" : "MIT",
+	"homepage" : "",
+	"icon" : "",
+	"preferences" : [{
+			"name" : "resumeSession",
+			"title" : "Resume session",
+			"description" : "Resume random walk session on brower restart",
+			"type" : "bool",
+			"value" : true
+		}, {
+			"name" : "url",
+			"title" : "Start URL",
+			"description" : "The starting page for a new random walk session",
+			"type" : "string",
+			"value" : "http://www.bbc.co.uk/news/"
+		}, {
+			"name" : "searchUrl",
+			"title" : "Search URL",
+			"description" : "The search page from which to start a new random walk session",
+			"type" : "radio",
+			"value" : "https://www.google.co.uk/search?q={0}",
+			"options" : [{
+					"value" : "https://www.google.com/search?q={0}",
+					"label" : "Google"
+				}, {
+					"value" : "https://search.yahoo.com/search?p={0}",
+					"label" : "Yahoo"
+				}, {
+					"value" : "https://www.bing.com/search?q={0}",
+					"label" : "Bing"
+				}, {
+					"value" : "https://duckduckgo.com/?q={0}",
+					"label" : "DuckDuckGo"
+				}, {
+					"value" : "https://startpage.com/do/search?q={0}",
+					"label" : "StartPage"
+				}
+			]
+		}, {
+			"name" : "searchTerm0",
+			"title" : "First search term",
+			"description" : "The part of speech for the first random search term",
+			"type" : "radio",
+			"value" : "AV[0P]",
+			"options" : [{
+					"value" : "",
+					"label" : "(none)"
+				}, {
+					"value" : "AV[0P]",
+					"label" : "adverb"
+				}, {
+					"value" : "V[BDHMV][BDGINZ0]",
+					"label" : "verb"
+				}, {
+					"value" : "AJ[0CS]",
+					"label" : "adjective"
+				}, {
+					"value" : "N[NP][012]",
+					"label" : "noun"
+				}
+			]
+		}, {
+			"name" : "searchTerm1",
+			"title" : "Second search term",
+			"description" : "The part of speech for the second random search term",
+			"type" : "radio",
+			"value" : "V[BDHMV][BDGINZ0]",
+			"options" : [{
+					"value" : "",
+					"label" : "(none)"
+				}, {
+					"value" : "AV[0P]",
+					"label" : "adverb"
+				}, {
+					"value" : "V[BDHMV][BDGINZ0]",
+					"label" : "verb"
+				}, {
+					"value" : "AJ[0CS]",
+					"label" : "adjective"
+				}, {
+					"value" : "N[NP][012]",
+					"label" : "noun"
+				}
+			]
+		}, {
+			"name" : "searchTerm2",
+			"title" : "Third search term",
+			"description" : "The part of speech for the third random search term",
+			"type" : "radio",
+			"value" : "AJ[0CS]",
+			"options" : [{
+					"value" : "",
+					"label" : "(none)"
+				}, {
+					"value" : "AV[0P]",
+					"label" : "adverb"
+				}, {
+					"value" : "V[BDHMV][BDGINZ0]",
+					"label" : "verb"
+				}, {
+					"value" : "AJ[0CS]",
+					"label" : "adjective"
+				}, {
+					"value" : "N[NP][012]",
+					"label" : "noun"
+				}
+			]
+		}, {
+			"name" : "searchTerm3",
+			"title" : "Fourth search term",
+			"description" : "The part of speech for the fourth random search term",
+			"type" : "radio",
+			"value" : "N[NP][012]",
+			"options" : [{
+					"value" : "",
+					"label" : "(none)"
+				}, {
+					"value" : "AV[0P]",
+					"label" : "adverb"
+				}, {
+					"value" : "V[BDHMV][BDGINZ0]",
+					"label" : "verb"
+				}, {
+					"value" : "AJ[0CS]",
+					"label" : "adjective"
+				}, {
+					"value" : "N[NP][012]",
+					"label" : "noun"
+				}
+			]
+		}, {
+			"name" : "useCurrent",
+			"label" : "Use Current",
+			"title" : "Use current page",
+			"type" : "control"
+		}, {
+			"name" : "intervalMin",
+			"title" : "Minimum interval (secs)",
+			"description" : "The minimum interval between random clicks",
+			"type" : "integer",
+			"value" : 1
+		}, {
+			"name" : "intervalMax",
+			"title" : "Maximum interval (secs)",
+			"description" : "The maximum interval between random clicks. For a fixed interval set this to the same value as Minimum interval.",
+			"type" : "integer",
+			"value" : 1
+		}, {
+			"name" : "autoClick",
+			"title" : "Auto-click",
+			"description" : "Automatically click random links at given intervals",
+			"type" : "bool",
+			"value" : true
+		}, {
+			"name" : "linkPolicy",
+			"title" : "Link selection policy",
+			"description" : "How to select which links to follow",
+			"type" : "radio",
+			"value" : "preferOtherDomain",
+			"options" : [{
+					"value" : "any",
+					"label" : "Follow links to any site"
+				}, {
+					"value" : "preferOtherHost",
+					"label" : "Prefer links to other hosts"
+				}, {
+					"value" : "preferOtherDomain",
+					"label" : "Prefer links to other domains"
+				}, {
+					"value" : "requireOtherHost",
+					"label" : "Only follow links to other hosts"
+				}, {
+					"value" : "requireOtherDomain",
+					"label" : "Only follow links to other domains"
+				}
+			]
+		}, {
+			"name" : "blacklist",
+			"title" : "Website  blacklist",
+			"description" : "Never follow links to sites in these domains (comma-separated, * wildcard)",
+			"type" : "string",
+			"value" : "*facebook*, *google*, *microsoft*, *linkedin*, *paypal*, *pinterest*, *twitter*, *youtube*, *e-bay*, *wordpress*"
+		}, {
+			"name" : "historyLength",
+			"title" : "History length",
+			"description" : "The number of visited web page addresses to remember and avoid",
+			"type" : "integer",
+			"value" : 100
+		}, {
+			"name" : "sameHostLengthLimit",
+			"title" : "Maximum same-host sequence length",
+			"description" : "Backtrack from same-host link sequence if it reaches this length",
+			"type" : "integer",
+			"value" : 2
+		}, {
+			"name" : "sameDomainLengthLimit",
+			"title" : "Maximum same-domain sequence length",
+			"description" : "Backtrack from same-domain link sequence if it reaches this length",
+			"type" : "integer",
+			"value" : 4
+		}, {
+			"name" : "pageLoadTimeout",
+			"title" : "Maximum page load time",
+			"description" : "Don't wait longer than this many seconds for a page to finish loading",
+			"type" : "integer",
+			"value" : 6
+		}, {
+			"name" : "sdk.console.logLevel",
+			"title" : "Add-on logging level",
+			"description" : "Sets the levels at which the add-on emits logging messages",
+			"type" : "radio",
+			"value" : "debug",
+			"options" : [{
+					"value" : "off",
+					"label" : "Off"
+				}, {
+					"value" : "error",
+					"label" : "Error"
+				}, {
+					"value" : "warn",
+					"label" : "Warn"
+				}, {
+					"value" : "info",
+					"label" : "Info"
+				}, {
+					"value" : "debug",
+					"label" : "Debug"
+				}, {
+					"value" : "all",
+					"label" : "All"
+				}
+			]
+		}, {
+			"name" : "language",
+			"title" : "Language",
+			"description" : "A comma-separated list of 2-character ISO language codes to set in HTTP Accept-Language request headers",
+			"type" : "string",
+			"value" : "en"
+		}
+	]
+}
