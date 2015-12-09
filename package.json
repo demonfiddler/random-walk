@@ -9,15 +9,33 @@
 		"firefox" : ">=38.0a1",
 		"fennec" : ">=38.0a1"
 	},
-	"license" : "MIT",
-	"homepage" : "",
-	"icon" : "",
+	"license" : "GPLv3",
+	"homepage" : "https://github.com/demonfiddler/random-walk",
+	"icon" : "data/icon-32.png",
 	"preferences" : [{
 			"name" : "resumeSession",
 			"title" : "Resume session",
 			"description" : "Resume random walk session on brower restart",
 			"type" : "bool",
 			"value" : true
+		}, {
+			"name" : "autoClick",
+			"title" : "Auto-click",
+			"description" : "Automatically click random links at given intervals",
+			"type" : "bool",
+			"value" : false
+		}, {
+			"name" : "intervalMin",
+			"title" : "Minimum interval (secs)",
+			"description" : "The minimum interval between random clicks",
+			"type" : "integer",
+			"value" : 4
+		}, {
+			"name" : "intervalMax",
+			"title" : "Maximum interval (secs)",
+			"description" : "The maximum interval between random clicks. For a fixed interval set this to the same value as Minimum interval.",
+			"type" : "integer",
+			"value" : 10
 		}, {
 			"name" : "url",
 			"title" : "Start URL",
@@ -57,6 +75,9 @@
 					"value" : "",
 					"label" : "(none)"
 				}, {
+					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
+					"label" : "(random)"
+				}, {
 					"value" : "AV[0P]",
 					"label" : "adverb"
 				}, {
@@ -79,6 +100,9 @@
 			"options" : [{
 					"value" : "",
 					"label" : "(none)"
+				}, {
+					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
+					"label" : "(random)"
 				}, {
 					"value" : "AV[0P]",
 					"label" : "adverb"
@@ -103,6 +127,9 @@
 					"value" : "",
 					"label" : "(none)"
 				}, {
+					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
+					"label" : "(random)"
+				}, {
 					"value" : "AV[0P]",
 					"label" : "adverb"
 				}, {
@@ -126,6 +153,9 @@
 					"value" : "",
 					"label" : "(none)"
 				}, {
+					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
+					"label" : "(random)"
+				}, {
 					"value" : "AV[0P]",
 					"label" : "adverb"
 				}, {
@@ -139,29 +169,6 @@
 					"label" : "noun"
 				}
 			]
-		}, {
-			"name" : "useCurrent",
-			"label" : "Use Current",
-			"title" : "Use current page",
-			"type" : "control"
-		}, {
-			"name" : "intervalMin",
-			"title" : "Minimum interval (secs)",
-			"description" : "The minimum interval between random clicks",
-			"type" : "integer",
-			"value" : 1
-		}, {
-			"name" : "intervalMax",
-			"title" : "Maximum interval (secs)",
-			"description" : "The maximum interval between random clicks. For a fixed interval set this to the same value as Minimum interval.",
-			"type" : "integer",
-			"value" : 1
-		}, {
-			"name" : "autoClick",
-			"title" : "Auto-click",
-			"description" : "Automatically click random links at given intervals",
-			"type" : "bool",
-			"value" : true
 		}, {
 			"name" : "linkPolicy",
 			"title" : "Link selection policy",
@@ -191,6 +198,12 @@
 			"description" : "Never follow links to sites in these domains (comma-separated, * wildcard)",
 			"type" : "string",
 			"value" : "*facebook*, *google*, *microsoft*, *linkedin*, *paypal*, *pinterest*, *twitter*, *youtube*, *e-bay*, *wordpress*"
+		}, {
+			"name" : "language",
+			"title" : "Language",
+			"description" : "A comma-separated list of 2-character ISO language codes to set in HTTP Accept-Language request headers",
+			"type" : "string",
+			"value" : "en"
 		}, {
 			"name" : "historyLength",
 			"title" : "History length",
@@ -241,12 +254,6 @@
 					"label" : "All"
 				}
 			]
-		}, {
-			"name" : "language",
-			"title" : "Language",
-			"description" : "A comma-separated list of 2-character ISO language codes to set in HTTP Accept-Language request headers",
-			"type" : "string",
-			"value" : "en"
 		}
 	]
 }

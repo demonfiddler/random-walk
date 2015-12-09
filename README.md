@@ -4,7 +4,7 @@ An add-on to take your browser on an automated random walk through the World Wid
 ## Applications
 
 ### Random Browsing
-It's remarkable where this add-on can take you, to websites and topics you'd never ordinarily dream of visiting. Undirected intellectual stimulation can lead to serendipitous discoveries and inspiration. Web search engines use adaptive filtering that limits search results to topics that they _believe_ are of interest to you. This bias can be helpful but can also conceal broader possibilities. The random-walk add-on can potentially mitigate the search narrowing effect.
+Let the random-walk add-on take you to offbeat websites you'd never heard of. Encounter new topics and possibilities. Undirected intellectual stimulation can lead to serendipitous discoveries and inspiration. Web search engines use adaptive filtering that limits search results to topics that they _believe_ are of interest to you. This bias can be helpful but can also conceal broader possibilities. The random-walk add-on can potentially mitigate the search narrowing effect.
 
 ### Internet Privacy
 Personal privacy is highly prized by most people but increasingly threatened by invasive technological developments and legislation. Internet search providers, social media, e-commerce and many commonly used websites gather vast amounts of data on their users' interests, postings, search terms and browsing history. It is now common knowledge that government surveillance has reached Orwellian levels far beyond reasonable consent. In the United Kingdom ISPs are required to log all Internet protocol headers, telephone call and SMS details. There are some countermeasures one can deploy to reduce the level of information leakage, such as 'do not track' request headers, cookie and referrer controls, the use of private/incognito browsing sessions, VPNs, proxy servers or the TOR network, but even these may not entirely eliminate leakage.  One additional countermeasure is to deliberately degrade the informational 'signal-to-noise' ratio in the activity logs kept by your ISP, by executing random searches and randomly clicking links. The random-walk add-on automates this approach.
@@ -24,10 +24,10 @@ If these navigation constraints cause the add-on to backtrack to the start page 
 |Auto-click|boolean|true|Automatically click random links at given intervals|
 |Start page|URL|http://www.bbc.co.uk/news/|The starting page for a new random walk session|
 |Search Provider|choice|Google|The search page from which to start a new random walk session (Google/Yahoo/Bing/DuckDuckGo/StartPage)|
-|First search term|choice|adverb|The first random search term (none/adverb/verb/adjective/noun)|
-|Second search term|choice|verb|The second random search term|
-|Third search term|choice|adjective|The third random search term|
-|Fourth search term|choice|noun|The fourth random search term|
+|First search term|choice|adverb|The first random search term (none/random/adverb/verb/adjective/noun)|
+|Second search term|choice|verb|The second random search term (ditto)|
+|Third search term|choice|adjective|The third random search term (ditto)|
+|Fourth search term|choice|noun|The fourth random search term (ditto)|
 |Minimum interval|integer|4|The minimum interval in seconds between random clicks|
 |Maximum interval|integer|10|The maximum interval in seconds between random clicks. For a fixed interval set this to the same value as Minimum interval.|
 |Link selection policy|choice|prefer other domain|How to select which links to follow (any/prefer other host/prefer other domain/require other host/require other domain)|
@@ -40,3 +40,4 @@ If these navigation constraints cause the add-on to backtrack to the start page 
 |Language|string|en|Web page languages to accept (a comma-separated list of 2-character ISO language codes to set in HTTP Accept-Language request headers)|
 
 ##Frequently Asked Questions
+1.
