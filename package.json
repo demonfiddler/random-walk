@@ -4,7 +4,7 @@
 	"version" : "0.0.1",
 	"description" : "Takes you on a random web walk",
 	"main" : "lib/main.js",
-	"author" : "Adrian Price <adrianp.quatinus@virginmedia.com>",
+	"author" : "Demon Fiddler <demonfiddler@virginmedia.com>",
 	"engines" : {
 		"firefox" : ">=38.0a1",
 		"fennec" : ">=38.0a1"
@@ -13,37 +13,37 @@
 	"homepage" : "https://github.com/demonfiddler/random-walk",
 	"icon" : "data/icon-32.png",
 	"preferences" : [{
-			"name" : "resumeSession",
+			"name" : "resume_session",
 			"title" : "Resume session",
-			"description" : "Resume random walk session on brower restart",
+			"description" : "Resume random walk session on browser restart",
 			"type" : "bool",
 			"value" : true
 		}, {
-			"name" : "autoClick",
+			"name" : "auto_click",
 			"title" : "Auto-click",
 			"description" : "Automatically click random links at given intervals",
 			"type" : "bool",
-			"value" : false
+			"value" : true
 		}, {
-			"name" : "intervalMin",
-			"title" : "Minimum interval (secs)",
-			"description" : "The minimum interval between random clicks",
+			"name" : "interval_min",
+			"title" : "Minimum auto-click interval (secs)",
+			"description" : "The minimum interval between auto-clicks",
 			"type" : "integer",
 			"value" : 4
 		}, {
-			"name" : "intervalMax",
-			"title" : "Maximum interval (secs)",
-			"description" : "The maximum interval between random clicks. For a fixed interval set this to the same value as Minimum interval.",
+			"name" : "interval_max",
+			"title" : "Maximum auto-click interval (secs)",
+			"description" : "The maximum interval between auto-clicks. For a fixed interval set this to the same value as Minimum interval.",
 			"type" : "integer",
 			"value" : 10
 		}, {
-			"name" : "url",
+			"name" : "start_url",
 			"title" : "Start URL",
-			"description" : "The starting page for a new random walk session",
+			"description" : "The starting page for a new random walk session (leave blank to start with a random search)",
 			"type" : "string",
 			"value" : "http://www.bbc.co.uk/news/"
 		}, {
-			"name" : "searchUrl",
+			"name" : "search_url",
 			"title" : "Search URL",
 			"description" : "The search page from which to start a new random walk session",
 			"type" : "radio",
@@ -66,18 +66,12 @@
 				}
 			]
 		}, {
-			"name" : "searchTerm0",
+			"name" : "search_term_0",
 			"title" : "First search term",
 			"description" : "The part of speech for the first random search term",
 			"type" : "radio",
 			"value" : "AV[0P]",
 			"options" : [{
-					"value" : "",
-					"label" : "(none)"
-				}, {
-					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
-					"label" : "(random)"
-				}, {
 					"value" : "AV[0P]",
 					"label" : "adverb"
 				}, {
@@ -89,21 +83,21 @@
 				}, {
 					"value" : "N[NP][012]",
 					"label" : "noun"
+				}, {
+					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
+					"label" : "(random)"
+				}, {
+					"value" : "",
+					"label" : "(none)"
 				}
 			]
 		}, {
-			"name" : "searchTerm1",
+			"name" : "search_term_1",
 			"title" : "Second search term",
 			"description" : "The part of speech for the second random search term",
 			"type" : "radio",
 			"value" : "V[BDHMV][BDGINZ0]",
 			"options" : [{
-					"value" : "",
-					"label" : "(none)"
-				}, {
-					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
-					"label" : "(random)"
-				}, {
 					"value" : "AV[0P]",
 					"label" : "adverb"
 				}, {
@@ -115,21 +109,21 @@
 				}, {
 					"value" : "N[NP][012]",
 					"label" : "noun"
+				}, {
+					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
+					"label" : "(random)"
+				}, {
+					"value" : "",
+					"label" : "(none)"
 				}
 			]
 		}, {
-			"name" : "searchTerm2",
+			"name" : "search_term_2",
 			"title" : "Third search term",
 			"description" : "The part of speech for the third random search term",
 			"type" : "radio",
 			"value" : "AJ[0CS]",
 			"options" : [{
-					"value" : "",
-					"label" : "(none)"
-				}, {
-					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
-					"label" : "(random)"
-				}, {
 					"value" : "AV[0P]",
 					"label" : "adverb"
 				}, {
@@ -141,21 +135,21 @@
 				}, {
 					"value" : "N[NP][012]",
 					"label" : "noun"
+				}, {
+					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
+					"label" : "(random)"
+				}, {
+					"value" : "",
+					"label" : "(none)"
 				}
 			]
 		}, {
-			"name" : "searchTerm3",
+			"name" : "search_term_3",
 			"title" : "Fourth search term",
 			"description" : "The part of speech for the fourth random search term",
 			"type" : "radio",
 			"value" : "N[NP][012]",
 			"options" : [{
-					"value" : "",
-					"label" : "(none)"
-				}, {
-					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
-					"label" : "(random)"
-				}, {
 					"value" : "AV[0P]",
 					"label" : "adverb"
 				}, {
@@ -167,13 +161,19 @@
 				}, {
 					"value" : "N[NP][012]",
 					"label" : "noun"
+				}, {
+					"value" : "(?:AV[0P])|(?:V[BDHMV][BDGINZ0])|(?:AJ[0CS])|(?:N[NP][012])",
+					"label" : "(random)"
+				}, {
+					"value" : "",
+					"label" : "(none)"
 				}
 			]
 		}, {
-			"name" : "linkPolicy",
+			"name" : "link_policy",
 			"title" : "Link selection policy",
 			"description" : "How to select which links to follow",
-			"type" : "radio",
+			"type" : "menulist",
 			"value" : "preferOtherDomain",
 			"options" : [{
 					"value" : "any",
@@ -197,37 +197,37 @@
 			"title" : "Website  blacklist",
 			"description" : "Never follow links to sites in these domains (comma-separated, * wildcard)",
 			"type" : "string",
-			"value" : "*facebook*, *google*, *microsoft*, *linkedin*, *paypal*, *pinterest*, *twitter*, *youtube*, *e-bay*, *wordpress*"
+			"value" : "*adobe*, *facebook*, *google*, *microsoft*, *linkedin*, *paypal*, *pinterest*, *reddit*, *twitter*, *youtube*, *e-bay*, *wordpress*"
 		}, {
-			"name" : "language",
-			"title" : "Language",
-			"description" : "A comma-separated list of 2-character ISO language codes to set in HTTP Accept-Language request headers",
+			"name" : "locale",
+			"title" : "Locale(s)",
+			"description" : "A comma-separated list of lc[-CC] language/locale codes (see FAQ)",
 			"type" : "string",
 			"value" : "en"
 		}, {
-			"name" : "historyLength",
+			"name" : "history_length",
 			"title" : "History length",
 			"description" : "The number of visited web page addresses to remember and avoid",
 			"type" : "integer",
 			"value" : 100
 		}, {
-			"name" : "sameHostLengthLimit",
+			"name" : "same_host_length_limit",
 			"title" : "Maximum same-host sequence length",
 			"description" : "Backtrack from same-host link sequence if it reaches this length",
 			"type" : "integer",
 			"value" : 2
 		}, {
-			"name" : "sameDomainLengthLimit",
+			"name" : "same_domain_length_limit",
 			"title" : "Maximum same-domain sequence length",
 			"description" : "Backtrack from same-domain link sequence if it reaches this length",
 			"type" : "integer",
 			"value" : 4
 		}, {
-			"name" : "pageLoadTimeout",
+			"name" : "page_load_timeout",
 			"title" : "Maximum page load time",
-			"description" : "Don't wait longer than this many seconds for a page to finish loading",
+			"description" : "Backtrack after waiting this many seconds for an auto-clicked page to finish loading. Set to -1 to disable page load timeouts.",
 			"type" : "integer",
-			"value" : 6
+			"value" : 10
 		}, {
 			"name" : "sdk.console.logLevel",
 			"title" : "Add-on logging level",
@@ -254,6 +254,12 @@
 					"label" : "All"
 				}
 			]
+		}, {
+			"name" : "defaults",
+			"title" : "Restore Preference defaults",
+			"label" : "Restore",
+			"description" : "Restores all preferences to their original values",
+			"type" : "control"
 		}
 	]
 }
