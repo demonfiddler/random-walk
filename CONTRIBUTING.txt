@@ -1,0 +1,8 @@
+CONTRIBUTING
+------------
+
+Defect reports and enhancement requests are welcome and should be submitted to .
+
+Source-level contributions of bug fixes and enhancements are welcome and should be performed on a GitHub fork then submitted via a Git Pull Request (PR). BEFORE doing so, please file a defect report or enhancement request at  and be sure to reference the Issue number in Git commit messages.
+
+This Add-On is licensed under GNU Public Licence version 3 (GPLv3). The source code is available at https://github.com/demonfiddler/random-walk.

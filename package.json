@@ -1,17 +1,20 @@
 {
+	"id": "{89550845-d3a1-4a94-b667-c113004e545e}",
 	"name" : "random-walk",
 	"title" : "Random Walk",
 	"version" : "0.0.1",
 	"description" : "Takes you on a random web walk",
 	"main" : "lib/main.js",
 	"author" : "Demon Fiddler <demonfiddler@virginmedia.com>",
+	"contributors" : [],
 	"engines" : {
 		"firefox" : ">=38.0a1",
 		"fennec" : ">=38.0a1"
 	},
 	"license" : "GPLv3",
 	"homepage" : "https://github.com/demonfiddler/random-walk",
-	"icon" : "data/icon-32.png",
+	"icon" : "resource://{89550845-d3a1-4a94-b667-c113004e545e}/data/icon-32.png",
+	"icon64" : "resource://{89550845-d3a1-4a94-b667-c113004e545e}/data/icon-64.png",
 	"preferences" : [{
 			"name" : "resume_session",
 			"title" : "Resume session",
@@ -260,6 +263,13 @@
 			"label" : "Restore",
 			"description" : "Restores all preferences to their original values",
 			"type" : "control"
+		}, {
+			"name" : "licenceAccepted",
+			"title" : "Licence Accepted",
+			"description" : "Indicates whether licence terms and conditions have been accepted",
+			"type" : "bool",
+			"value" : true,
+    		"hidden": true
 		}
 	]
 }

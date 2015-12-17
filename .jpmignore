@@ -1,0 +1,12 @@
+BUILDING.txt
+CONTRIBUTING.txt
+poscodes
+.git
+.gitignore
+.jpmignore
+.DS_Store
+*.zip
+*.xpi
+*.project.json
+*.xcf
+test/*

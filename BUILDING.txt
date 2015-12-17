@@ -1,0 +1,6 @@
+BUILDING
+--------
+
+This is a Firefox web browser Add-On; it uses the Mozilla SDK and should be built and tested using the Mozilla jpm tool (see https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm).
+
+Ordinarily one would install a pre-built, signed binary XPI file from the Mozilla Add-On platform ('AMO') at https://addons.mozilla.org/. The only case where anyone other than the original publisher (Demon Fiddler) would need to build the Add-On might be to test bug-fixes or enhancements (see CONTRIBUTING.txt).

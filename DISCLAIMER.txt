@@ -1,0 +1,8 @@
+DISCLAIMER
+----------
+
+This web browser Add-On is supplied for the purpose of randomly navigating the World Wide Web, using hyperlinks yielded by random web searches and the web pages they list.
+
+Whilst every care has been taken in the preparation of this Add-On, the Publisher offers no warranty express or implied as to its fitness for purpose or freedom from defects. The Publisher accepts no liability for any loss, damage or injury associated with the use of this Add-On, howsoever caused. The End User of the installed Add-On hereby indemnifies the Publisher against any claims for such loss, damage or injury.
+
+In particular, the Publisher offers no guarantee or advice as to the legality of this software in any jurisdiction. Responsibility for legal usage rests entirely with the End User.
