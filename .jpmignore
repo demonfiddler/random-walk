@@ -5,6 +5,8 @@ poscodes
 .gitignore
 .jpmignore
 .DS_Store
+sign.cmd
+api-credentials.txt
 *.zip
 *.xpi
 *.project.json

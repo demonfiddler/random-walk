@@ -3,7 +3,7 @@
 	"name" : "random-walk",
 	"title" : "Random Walk",
 	"version" : "0.0.1",
-	"description" : "Takes you on a random web walk",
+	"description" : "Takes you on a random walk through the World Wide Web",
 	"main" : "lib/main.js",
 	"author" : "Demon Fiddler <demonfiddler@virginmedia.com>",
 	"contributors" : [],

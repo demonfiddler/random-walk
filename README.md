@@ -1,19 +1,19 @@
 # random-walk
-An add-on to take your browser on an automated random walk through the World Wide Web.
+An add-on to take your browser on an automated random walk through the World Wide Web. Download/install from https://addons.mozilla.org/en-US/firefox/addon/random-walk/.
 
 ## Supported Browsers
 Firefox 38 and later.
 
 ## Applications
 
-### 'Lucky-dip' Browsing
-Let the random-walk add-on take you to offbeat websites you'd never heard of. Let it introduce you to new topics and possibilities. Such undirected intellectual stimulation can lead to serendipitous discoveries and inspiration. Web search engines use adaptive filtering that limits search results to topics that they _believe_ are of interest to you. This bias can help focus results but can also conceal broader possibilities - the random-walk add-on can potentially mitigate the search narrowing effect by executing random searches.
-
 ### Internet Privacy
 Personal privacy is still highly prized by most people but increasingly threatened by invasive technological developments and legislation. Internet search providers, social media, e-commerce and many commonly used websites gather vast amounts of data on their users' interests, postings, search terms and browsing history. It is now common knowledge that government surveillance has reached Orwellian levels far beyond reasonable consent. In the United Kingdom telcos and ISPs are required to log all telephone call, SMS details and Internet protocol headers. On the World Wide Web there are some countermeasures one can deploy to reduce the level of information leakage, such as 'do not track' request headers, cookie and referer controls, the use of private/incognito browsing sessions, VPNs, proxy servers or the TOR network, but even these may not entirely eliminate leakage.  One additional countermeasure is to deliberately degrade the informational 'signal-to-noise' ratio in the activity logs kept by your ISP, by executing random searches and randomly clicking links. The random-walk add-on automates this approach.
 
+### 'Lucky-dip' Browsing
+Let the random-walk add-on take you to offbeat websites you'd never heard of. Let it introduce you to new topics and possibilities. Such undirected intellectual stimulation can lead to serendipitous discoveries and inspiration. Web search engines use adaptive filtering that limits search results to topics that they _believe_ are of interest to you. This bias can help focus results but can also conceal broader possibilities - the random-walk add-on can potentially mitigate the search narrowing effect by executing random searches.
+
 ### Testing Other Add-Ons
-The random-walk add-on can be useful when testing or developing other add-ons.
+The random-walk add-on can also be useful when testing or developing other add-ons.
 
 ## Operation
 ### Modes
