@@ -1,0 +1,6 @@
+PRIVACY
+-------
+
+This add-on does not itself collect, use, store, share or disclose any information about the user or any other person.
+
+However, during the course of its operation the add-on will execute web searches using random search terms and will cause the browser to visit a random sequence of websites. Each such visit is subject to the privacy policy in force at each particular website, including usage of cookies, local storage and so on.

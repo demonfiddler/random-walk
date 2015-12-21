@@ -6,14 +6,14 @@ Firefox 38 and later.
 
 ## Applications
 
-### Random Browsing
+### 'Lucky-dip' Browsing
 Let the random-walk add-on take you to offbeat websites you'd never heard of. Let it introduce you to new topics and possibilities. Such undirected intellectual stimulation can lead to serendipitous discoveries and inspiration. Web search engines use adaptive filtering that limits search results to topics that they _believe_ are of interest to you. This bias can help focus results but can also conceal broader possibilities - the random-walk add-on can potentially mitigate the search narrowing effect by executing random searches.
-
-### Testing Other Add-Ons
-The random-walk add-on can be useful when testing or developing other add-ons.
 
 ### Internet Privacy
 Personal privacy is still highly prized by most people but increasingly threatened by invasive technological developments and legislation. Internet search providers, social media, e-commerce and many commonly used websites gather vast amounts of data on their users' interests, postings, search terms and browsing history. It is now common knowledge that government surveillance has reached Orwellian levels far beyond reasonable consent. In the United Kingdom telcos and ISPs are required to log all telephone call, SMS details and Internet protocol headers. On the World Wide Web there are some countermeasures one can deploy to reduce the level of information leakage, such as 'do not track' request headers, cookie and referer controls, the use of private/incognito browsing sessions, VPNs, proxy servers or the TOR network, but even these may not entirely eliminate leakage.  One additional countermeasure is to deliberately degrade the informational 'signal-to-noise' ratio in the activity logs kept by your ISP, by executing random searches and randomly clicking links. The random-walk add-on automates this approach.
+
+### Testing Other Add-Ons
+The random-walk add-on can be useful when testing or developing other add-ons.
 
 ## Operation
 ### Modes
@@ -24,7 +24,7 @@ There is an auto-resume preference which on browser startup starts a random walk
 ### Link Policy
 The algorithm for choosing random links is configurable, for example to require or prefer links to pages from other hosts or other domains. There are also configurable limits to the maximum number of successive pages from the same host and the same domain. The time interval between random clicks is configurable. While the session is active the add-on maintains a history of pages visited, which it uses to backtrack out of dead ends such as websites or domains that link only to themselves. There is also a configurable page load timeout; in auto-click mode if the page is still loading after this interval has elapsed the add-on aborts the load and backtracks to a suitable previous page in the history. Such load timeouts are often observed on large pages laden with advertisements. There is a configurable 'wildcard blacklist' of websites that the add-on will never visit - the default blacklist includes vast 'black-hole' social media sites from which there is a low possibility of escape (such as Facebook and Twitter) or sites that predominantly feature non-HTML media types such as video on YouTube.
 
-### Back-tracking and Random Search
+### Back-tracking & Random Search
 If these navigation constraints cause the add-on to backtrack to the start page and there fail to find any remaining navigable links, this triggers a search using a random set of search terms. The add-on randonmly chooses one of the search results to follow. The search provider is user-configurable as are the parts of speech used as search terms. Supported search providers are Google, Yahoo, Bing, DuckDuckGo and StartPage. Searches may specify between one and four search terms, each of which can be independently configured as adverb, verb, adjective, noun or random. Words of the specified types are chosen randomly from a built-in word list.
 
 ##Preferences
@@ -67,7 +67,7 @@ The add-on preferences are available under Open Menu > Addons > Extensions > Ran
 5. Can I use a custom search provider for random searches?
   * The add-on supports only Google, Yahoo, Bing, DuckDuckGo and StartPage; there is not currently any means to specify any other provider.
 6. What is the 'Logging level' preference for?
-  * You can use logging to monitor the progress of a random walk session. The add-on emits logging messages during operation, which can be viewed by opening the developer tools (F12) and selecting the 'Console' tab.
+  * You can use logging to monitor the progress of a random walk session. The add-on emits logging messages during operation, which can be viewed by opening the Browser Console (Ctrl+Shift+J).
 7. What is the 'Locale(s)' preference for?
   * This preference allows you to specify your preferred language for the randomly selected web pages. The HTTP protocol (RFC 2616) used by the World Wide Web allows a user agent (e.g., a web browser) to supply an Accept-Language 'request header'.  The value is a comma-separated list of locale codes. A locale code consists of a two-character lowercase ISO 639-1 language code, *optionally* followed by a hyphen then a two-character uppercase ISO 3166 country code. In general the language component should suffice, as restricting pages to a specific language *and* country is likely to result in lots of link rejection and consequent back-tracking.
 8. I've set my preferred Locale but I still occasionally get pages in other languages - why?
@@ -78,6 +78,9 @@ The add-on preferences are available under Open Menu > Addons > Extensions > Ran
   * The add-on clicks random links, the subject matter of which it has no prior knowledge. It is not practicable for the add-on to attempt any content subject analysis or keyword filtering, so you could quite literally encounter anything the World Wide Web has to offer.
   * In auto-click mode the add-on will continue clicking and loading indefinitely. If your Internet account has a download quota you'll need to keep an eye on your bandwidth utilisation to avoid incurring additional usage charges.
   * Some websites have built-in denial-of-service safeguards to prevent them from being overloaded by automated requests. If you set 'Maximum same-host|domain sequence length' preferences too high and the 'Minimum|Maximum interval' interval too low you might trigger these safeguards and inadvertently lock yourself out for a period of time. In practice this is not likely to be a problem since the websites visited are chosen randomly.
+
+##Licence
+This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, you can obtain one at http://mozilla.org/MPL/2.0/.
 
 ##Copyright
 Copyright (c) 2015 Demon Fiddler. All Rights Reserved.

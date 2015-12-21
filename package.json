@@ -11,7 +11,7 @@
 		"firefox" : ">=38.0a1",
 		"fennec" : ">=38.0a1"
 	},
-	"license" : "GPLv3",
+	"license" : "MPLv2.0",
 	"homepage" : "https://github.com/demonfiddler/random-walk",
 	"icon" : "resource://{89550845-d3a1-4a94-b667-c113004e545e}/data/icon-32.png",
 	"icon64" : "resource://{89550845-d3a1-4a94-b667-c113004e545e}/data/icon-64.png",

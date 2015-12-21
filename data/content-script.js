@@ -1,3 +1,13 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * Random Walk - a browser add-on that takes a random walk through the web.
+ * Copyright (c) 2015 Demon Fiddler. All Rights Reserved.
+ * @author Demon Fiddler <demonfiddler@virginmedia.com>
+ */
+
 (function() {
 	self.port.on("aoAlert", onAlert);
 	self.port.on("aoConfirm", onConfirm);
